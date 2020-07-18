@@ -2,7 +2,8 @@ provider "aws" {
   region = "us-west-2"
 }
 
-#-----------------------------------------------------------------------------------------# CREATE A VPC WITH 2 SUBNETS: 1 PUBLIC, 1 PRIVATE
+#-----------------------------------------------------------------------------------------
+# CREATE A VPC WITH 2 SUBNETS: 1 PUBLIC, 1 PRIVATE
 #-----------------------------------------------------------------------------------------
 
 resource "aws_vpc" "main" {
@@ -21,7 +22,8 @@ resource "aws_subnet" "private" {
   cidr_block = "10.0.2.0/24"
 }
 
-#-----------------------------------------------------------------------------------------# CREATE AN INTERNET GATEWAY AND ROUTE TABLE ALLOWING THE PUBLIC SUBNET ACCESS TO THE INTERNET
+#-----------------------------------------------------------------------------------------
+# CREATE AN INTERNET GATEWAY AND ROUTE TABLE ALLOWING THE PUBLIC SUBNET ACCESS TO THE INTERNET
 #-----------------------------------------------------------------------------------------
 
 resource "aws_internet_gateway" "gw" {
@@ -42,7 +44,8 @@ resource "aws_route_table_association" "a" {
   route_table_id = aws_route_table.rt.id
 }
 
-#-----------------------------------------------------------------------------------------# CREATE SECURITY GROUP ENABLING EC2 INSTANCE ACCESS TO AND FROM THE INTERNET
+#-----------------------------------------------------------------------------------------
+# CREATE SECURITY GROUP ENABLING EC2 INSTANCE ACCESS TO AND FROM THE INTERNET
 #-----------------------------------------------------------------------------------------
 
 resource "aws_security_group" "allow_http" {
