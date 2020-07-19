@@ -1,4 +1,3 @@
-# terraform-sandbox
 This is an evolving collection of examples around creating common AWS architectures with Terraform. 
 
 ## Example #1 - EC2 Instance running public Docker container
