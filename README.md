@@ -2,6 +2,8 @@ This is an evolving collection of examples around creating common AWS architectu
 
 ## Example #1 - EC2 Instance running public Docker container
 
+![ec2-database example diagram](./docs/ec2-database-diagram.png)
+
 Demonstrates creating: 
 
 * A VPC
